@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>在 GitHub 的创作小角落 — dizzbl</title>
+  <meta name="keywords" content="GitHub, 开源, 代码, 仓库, PR, README, dizzbl" />
+  <meta name="description" content="欢迎来到我的 GitHub 小角落：项目、笔记与开源贡献的集合。" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft YaHei", sans-serif;
+      color: #24292e;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 50%, #e9eef6 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .main-box {
+      background-color: #fff;
+      border-radius: 14px;
+      width: 90%;
+      max-width: 680px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(36, 41, 46, 0.06);
+      transition: all 0.25s ease;
+      border: 1px solid #e1e4e8;
+    }
+
+    .main-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 40px rgba(99, 102, 241, 0.12);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+
+    .octocat {
+      width: 56px;
+      height: 56px;
+      border-radius: 10px;
+      background: linear-gradient(135deg,#24292e,#57606a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: bold;
+      font-size: 22px;
+      box-shadow: 0 6px 18px rgba(36,41,46,0.08);
+    }
+
+    .title {
+      font-size: 20px;
+      color: #0b1220;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #586069;
+      margin-top: 4px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 18px 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(3, 102, 214, 0.06);
+      transition: all 0.2s ease;
+      background: #24292e;
+      color: #fff;
+    }
+
+    .btn-wrapper:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 30px rgba(36, 41, 46, 0.12);
+    }
+
+    .btn-left {
+      width: 36px;
+      height: 44px;
+      background-color: #2ea44f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+    }
+
+    .btn-center {
+      background-color: transparent;
+      padding: 0 20px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      min-width: 220px;
+      color: #ffffff;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-tag {
+      background-color: rgba(255,255,255,0.06);
+      color: #c9d1d9;
+      padding: 0 12px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    .click-text {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #586069;
+      text-align: center;
+    }
+
+    .notice {
+      margin-top: 20px;
+      padding-top: 6px;
+      border-top: 1px dashed #e6edf3;
+    }
+
+    .notice-title {
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      color: #24292e;
+    }
+
+    .notice-title::before {
+      content: "🐙";
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    ul.tips {
+      list-style: decimal;
+      padding-left: 20px;
+      margin-top: 8px;
+      line-height: 1.9;
+      color: #2f363d;
+    }
+
+    .notice p {
+      font-size: 14px;
+      color: #4b5560;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    .repo-list {
+      margin-top: 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .repo {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #f6f8fa;
+      border: 1px solid #eaeef2;
+      font-size: 14px;
+      color: #1b1f23;
+    }
+
+    .repo .name {
+      font-weight:600;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 22px;
+      color: #6a737d;
+    }
+
+    @media screen and (max-width: 600px) {
+      .main-box {
+        padding: 20px;
+      }
+
+      .btn-center {
+        font-size: 15px;
+        min-width: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-box">
+    <div class="header">
+      <div class="octocat">GH</div>
+      <div>
+        <div class="title">fabuyepro 的 GitHub 小角落</div>
+        <div class="subtitle">项目展示 · 学习笔记 · 开源贡献</div>
+      </div>
+    </div>
+
+    <div class="button-container" id="enter-button" title="前往 GitHub 个人主页">
+      <div class="btn-wrapper" role="button" aria-label="访问我的 GitHub">
+        <div class="btn-left">★</div>
+        <div class="btn-center">❖ 访问我的 GitHub 发布页 ❖</div>
+        <div class="btn-tag">github.com</div>
+      </div>
+    </div>
+
+    <p class="click-text">点击上方按钮，进入最新地址发布页、星标项目和最新动态</p>
+
+    <div class="notice">
+      <div class="notice-title">开源与协作小贴士</div>
+      <p>* 在 README 中写清楚项目用途、安装与使用示例，降低贡献门槛。</p>
+      <p>* 小步提交（frequent commits）并写清楚提交信息，便于回溯。</p>
+
+      <ul class="tips">
+        <li>精简 issue 描述：背景、重现步骤、期望与实际结果。</li>
+        <li>提交 PR 前运行测试并在描述中关联相关 issue。</li>
+        <li>为项目准备贡献指南（CONTRIBUTING.md）和代码风格说明。</li>
+      </ul>
+
+      <div style="margin-top:12px; font-weight:700; color:#24292e;">精选仓库</div>
+      <div class="repo-list" id="repo-list">
+        <!-- 示例静态仓库条目（可替换为动态列表） -->
+        <div class="repo">
+          <div class="name">fabuyepro/example-project</div>
+          <div class="meta">⭐ 128</div>
+        </div>
+        <div class="repo">
+          <div class="name">fabuyepro/blog-notes</div>
+          <div class="meta">📄 文章与笔记</div>
+        </div>
+        <div class="repo">
+          <div class="name">fabuyepro/tooling-scripts</div>
+          <div class="meta">⚙️ 实用脚本</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      欢迎来访，动动手指点个 Star 支持一下 ✨<br>
+      Copyright © 2025 fabuyepro
+    </div>
+  </div>
+
+  <script>
+    // 点击按钮跳转到用户的 GitHub 个人主页
+    document.getElementById('enter-button').addEventListener('click', function () {
+      window.open('go.html', '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
